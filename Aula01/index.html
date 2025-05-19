@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 10px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+        }
+
+        h2 {
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            border: 2px solid #090909;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0) 0px 5px 15px;
+        }
+
+        .container input {
+            padding: 10px;
+            border-radius: 10px;
+            border: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        button,
+        select {
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Hello World</h1>
+    <br>
+    <img src="https://static.vecteezy.com/ti/fotos-gratis/t2/41436456-ai-gerado-cinematografico-imagem-do-uma-leao-dentro-uma-natureza-panorama-foto.jpg"
+        alt="leão">
+    <br>
+    <iframe src="https://www.youtube.com/embed/h2jMP1IBTxE?si=86_P0I6Qj3hwuMAZ" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br><br><br>
+    <h2>Formulário </h2>
+    <div class="container">
+        <label for="fname">Nome:</label>
+        <input type="text" id="fname" placeholder="Digite seu nome">
+        <label for="lname">Sobrenome:</label><br>
+        <input type="text" id="lname" placeholder="Digite seu sobrenome">
+        <label for="age">Idade:</label><br>
+        <input type="number" id="age" placeholder="Digite sua idade">
+        <label for="cities">Cidade:</label>
+        <select id="cities">
+            <option value="Curitiba">Curitiba</option>
+            <option value="São Paulo">São Paulo</option>
+            <option value="Rio de Janeiro">Rio de Janeiro</option>
+            <option value="Belo Horizonte">Belo Horizonte</option>
+            <option value="Florianópolis">Florianópolis</option>
+            <option value="Rio Branco">Rio Branco</option>
+        </select>
+        <button onclick="printar()">Enviar</button>
+    </div>
+    <br>
+    <h3 id="print"></h3>
+    <br><br><br>
+    <script>
+        function printar() {
+            var first = document.getElementById("fname").value
+            var last = document.getElementById("lname").value
+            var age = document.getElementById("age").value
+            var city = document.getElementById("cities").value
+            var print = document.getElementById("print")
+            //concatenação de strings
+            //print.textContent = first + " " + last
+            //template string
+            print.textContent = `Meu nome é ${first} ${last}, tenho ${age} anos de idade e moro em ${city}.`
+        }
+    </script>
+</body>
+
+</html>

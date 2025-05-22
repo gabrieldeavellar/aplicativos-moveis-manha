@@ -1,2 +1,2 @@
 # aplicativos-moveis-manha
-Aulas iniciais de desenvolvimento aplicativos moveis
+Aulas iniciais de desenvolvimento aplicativos moveis utilizando ReactJs
